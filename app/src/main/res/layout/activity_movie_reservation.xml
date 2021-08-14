@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieReservation">
+
+    <ImageView
+        android:id="@+id/iv_movie_r"
+        android:layout_width="289dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/mv2" />
+
+    <TextView
+        android:id="@+id/tv_movieName_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/movieName"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_movie_r" />
+
+    <TextView
+        android:id="@+id/tv_pricemr_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/tkt_price"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_PricePerTicket"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reserve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@color/design_default_color_background"
+        android:onClick="gotoMovieconfirmBooking"
+        android:text="@string/btn_reserve"
+        app:backgroundTint="#000080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_noOfTickets_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/No_Of_Tickets"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/et_noOfTickets_r"
+        app:layout_constraintEnd_toStartOf="@+id/et_noOfTickets_r"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/et_noOfTickets_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="52dp"
+        android:ems="10"
+        android:hint="@string/No_OF_Ticket"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btn_reserve"
+        app:layout_constraintStart_toEndOf="@+id/tv_noOfTickets_r" />
+
+    <EditText
+        android:id="@+id/et_PricePerTicket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
+        android:ems="10"
+        android:hint="@string/et_PricePerTicket"
+        android:inputType="textPersonName"
+        android:text="@string/pricePerTicket"
+        app:layout_constraintStart_toEndOf="@+id/tv_pricemr_r"
+        app:layout_constraintTop_toBottomOf="@+id/tv_movieName_r" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
